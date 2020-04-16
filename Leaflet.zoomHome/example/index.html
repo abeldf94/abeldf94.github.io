@@ -11,11 +11,11 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
   <script src="https://use.fontawesome.com/49fea09fd5.js"></script>
+  <script src="../dist/leaflet.zoomhome.min.js"></script>
 </head>
 
 <body>
   <div id="map" style="height: 600px;"></div>
-  <script src="../dist/leaflet.zoomhome.min.js"></script>
   <script>
     let baseLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -27,7 +27,7 @@
       layers: [baseLayer],
       zoomControl: false
     });
-    L.control.zoomHome().addTo(myMap);
+    L.Control.zoomHome().addTo(myMap);
   </script>
 </body>
 
